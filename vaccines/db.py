@@ -10,7 +10,7 @@ class SQLite3(object):
 
         cursor.execute(sql, rows)
 
-    def __init__(self, file_name, schema_file):
+    def __init__(self, file_name, schema_file=''):
         print 'Connecting to %s' % file_name
         self.conn = sqlite3.connect(file_name)
 
