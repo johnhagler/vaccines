@@ -1,3 +1,5 @@
+PRAGMA encoding="UTF-8";
+
 drop table if exists incidents;
 
 create table incidents (
@@ -20,9 +22,17 @@ create table coverage (
     incident_count real
 );
 
-drop table if exists counties;
+drop table if exists countries;
 
 create table countries (
     who_country_name text,
     population_country_name text
-)
+);
+
+drop table if exists populations;
+
+create table populations (
+    country_name text,
+    year integer,
+    population real
+);
